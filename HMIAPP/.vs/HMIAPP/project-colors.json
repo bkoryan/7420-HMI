@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c75a6bea-55da-43f4-a1cb-baf0ff9fe208": {
+      "ProjectGuid": "c75a6bea-55da-43f4-a1cb-baf0ff9fe208",
+      "DisplayName": "HMIAPP",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

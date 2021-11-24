@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HMIAPP": {
+      "commandName": "Project",
+      "jsWebView2Debugging": false,
+      "sqlDebugging": true,
+      "nativeDebugging": true
+    }
+  }
+}
