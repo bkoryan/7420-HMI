@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace HMIAPP
 {
@@ -76,7 +77,16 @@ namespace HMIAPP
                     passTxtBoxError.SetError(PassTxtBox, "cannot leave blank!");
                     return;
                 }
-         
+
+                Regex rgx = new Regex("[^A-Za-z0-9]");
+                bool hasSpecialChars = rgx.IsMatch(UserNameTxtBox.Text);
+                if(hasSpecialChars)
+                {
+                    MessageBox.Show("No special characters allowed in username");
+                    return;
+                }
+               
+
                 passTxtBoxError.Clear();
                 this.Hide();
                 MainPage mainPage = new MainPage();
@@ -98,9 +108,20 @@ namespace HMIAPP
 
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void contactSupportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Contact Support");
+            MessageBox.Show("contact support");
+        }
+
+        private void viewUserManualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo startArgs = new ProcessStartInfo();
+            startArgs.FileName = "C:\\Users\\burakfirat.koryan\\Desktop\\TemconStuff.pdf";
+            startArgs.Arguments = null;
+            startArgs.UseShellExecute = true;
+            Process process = new Process();
+            process.StartInfo = startArgs;
+            process.Start();
         }
     }
 }

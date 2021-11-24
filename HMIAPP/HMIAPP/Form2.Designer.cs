@@ -42,6 +42,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.StripMenuLoginForm = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewUserManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactSupportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userNameTxtBoxError)).BeginInit();
@@ -146,10 +148,26 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewUserManualToolStripMenuItem,
+            this.contactSupportToolStripMenuItem});
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Help";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // viewUserManualToolStripMenuItem
+            // 
+            this.viewUserManualToolStripMenuItem.Name = "viewUserManualToolStripMenuItem";
+            this.viewUserManualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewUserManualToolStripMenuItem.Text = "View User Manual";
+            this.viewUserManualToolStripMenuItem.Click += new System.EventHandler(this.viewUserManualToolStripMenuItem_Click);
+            // 
+            // contactSupportToolStripMenuItem
+            // 
+            this.contactSupportToolStripMenuItem.Name = "contactSupportToolStripMenuItem";
+            this.contactSupportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactSupportToolStripMenuItem.Text = "Contact Support";
+            this.contactSupportToolStripMenuItem.Click += new System.EventHandler(this.contactSupportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
@@ -208,5 +226,7 @@
         private System.Windows.Forms.ToolStripMenuItem StripMenuLoginForm;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewUserManualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactSupportToolStripMenuItem;
     }
 }

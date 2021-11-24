@@ -20,6 +20,7 @@ using TwinCAT.Ads;
 using TCEVENTLOGGERLib;
 //using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace HMIAPP
@@ -482,6 +483,7 @@ namespace HMIAPP
             LoginForm loginform = new LoginForm();
             loginform.Show();
         }
+
     }
 
 }

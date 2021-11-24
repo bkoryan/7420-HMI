@@ -133,6 +133,7 @@ namespace HMIAPP
             this.listView1 = new System.Windows.Forms.ListView();
             this.ClearAlarmsButton = new System.Windows.Forms.Button();
             this.IOControlPanel = new System.Windows.Forms.Panel();
+            this.AutoManLabel = new System.Windows.Forms.Label();
             this.S134MetalSensorLabel = new System.Windows.Forms.Label();
             this.S133KnifeHomeSensorLabel = new System.Windows.Forms.Label();
             this.S132HeightExitMaxLabel = new System.Windows.Forms.Label();
@@ -157,7 +158,6 @@ namespace HMIAPP
             this.ManualControlButton = new System.Windows.Forms.Button();
             this.IOControlButton = new System.Windows.Forms.Button();
             this.CloseAppButton = new System.Windows.Forms.Button();
-            this.AutoManLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BannerPictureBox)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.ManualControlPanel.SuspendLayout();
@@ -1208,6 +1208,16 @@ namespace HMIAPP
             this.IOControlPanel.Size = new System.Drawing.Size(899, 670);
             this.IOControlPanel.TabIndex = 2;
             // 
+            // AutoManLabel
+            // 
+            this.AutoManLabel.AutoSize = true;
+            this.AutoManLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AutoManLabel.Location = new System.Drawing.Point(709, 27);
+            this.AutoManLabel.Name = "AutoManLabel";
+            this.AutoManLabel.Size = new System.Drawing.Size(97, 25);
+            this.AutoManLabel.TabIndex = 13;
+            this.AutoManLabel.Text = "Auto/Man";
+            // 
             // S134MetalSensorLabel
             // 
             this.S134MetalSensorLabel.AutoSize = true;
@@ -1405,7 +1415,7 @@ namespace HMIAPP
             // AlarmsIconPictureBox
             // 
             this.AlarmsIconPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("AlarmsIconPictureBox.Image")));
-            this.AlarmsIconPictureBox.Location = new System.Drawing.Point(922, 9);
+            this.AlarmsIconPictureBox.Location = new System.Drawing.Point(954, 9);
             this.AlarmsIconPictureBox.Name = "AlarmsIconPictureBox";
             this.AlarmsIconPictureBox.Size = new System.Drawing.Size(55, 55);
             this.AlarmsIconPictureBox.TabIndex = 15;
@@ -1440,16 +1450,6 @@ namespace HMIAPP
             this.CloseAppButton.Text = "Exit";
             this.CloseAppButton.UseVisualStyleBackColor = true;
             this.CloseAppButton.Click += new System.EventHandler(this.CloseAppButton_Click);
-            // 
-            // AutoManLabel
-            // 
-            this.AutoManLabel.AutoSize = true;
-            this.AutoManLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AutoManLabel.Location = new System.Drawing.Point(709, 27);
-            this.AutoManLabel.Name = "AutoManLabel";
-            this.AutoManLabel.Size = new System.Drawing.Size(97, 25);
-            this.AutoManLabel.TabIndex = 13;
-            this.AutoManLabel.Text = "Auto/Man";
             // 
             // MainPage
             // 
