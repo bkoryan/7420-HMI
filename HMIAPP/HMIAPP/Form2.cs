@@ -27,6 +27,9 @@ namespace HMIAPP
             {
                 UserNameTxtBox.Clear();
                 PassTxtBox.Clear();
+                passTxtBoxError.Clear();
+                userNameTxtBoxError.Clear();
+
             }
             catch (Exception ex) 
             { 
@@ -53,17 +56,37 @@ namespace HMIAPP
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            
-
-        }
+      
 
         private void EnterLogin_Click(object sender, EventArgs e)
         {
+
+            bool userNamechk = string.IsNullOrEmpty(UserNameTxtBox.Text);
+            bool passBoxchk = string.IsNullOrEmpty(PassTxtBox.Text);
+
+            if(userNamechk)
+            {   
+               userNameTxtBoxError.SetError(UserNameTxtBox, "cannot leave blank!");
+            }
+            else
+            {
+                userNameTxtBoxError.Clear();
+                if (passBoxchk)
+                {
+                    passTxtBoxError.SetError(PassTxtBox, "cannot leave blank!");
+                    return;
+                }
+         
+                passTxtBoxError.Clear();
+                this.Hide();
+                MainPage mainPage = new MainPage();
+                mainPage.Show();
+            }
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            MainPage mainPage = new MainPage(); 
-            mainPage.Show();
         }
     }
 }

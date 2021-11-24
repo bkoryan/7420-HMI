@@ -2508,11 +2508,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\burakfirat.koryan\\Desktop\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
+      "projectUniqueName": "C:\\Users\\burakfirat.koryan\\Desktop\\7420-HMI\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
       "projectName": "HMIAPP",
-      "projectPath": "C:\\Users\\burakfirat.koryan\\Desktop\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
+      "projectPath": "C:\\Users\\burakfirat.koryan\\Desktop\\7420-HMI\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
       "packagesPath": "C:\\Users\\burakfirat.koryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\burakfirat.koryan\\Desktop\\HMIAPP\\HMIAPP\\obj\\",
+      "outputPath": "C:\\Users\\burakfirat.koryan\\Desktop\\7420-HMI\\HMIAPP\\HMIAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -31,7 +31,6 @@ namespace HMIAPP
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            this.nCounterTxt = new System.Windows.Forms.TextBox();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.BannerPictureBox = new System.Windows.Forms.PictureBox();
             this.MainBut = new System.Windows.Forms.Button();
@@ -158,6 +157,7 @@ namespace HMIAPP
             this.ManualControlButton = new System.Windows.Forms.Button();
             this.IOControlButton = new System.Windows.Forms.Button();
             this.CloseAppButton = new System.Windows.Forms.Button();
+            this.AutoManLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BannerPictureBox)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.ManualControlPanel.SuspendLayout();
@@ -167,13 +167,6 @@ namespace HMIAPP
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AlarmsIconPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // nCounterTxt
-            // 
-            this.nCounterTxt.Location = new System.Drawing.Point(7, 720);
-            this.nCounterTxt.Name = "nCounterTxt";
-            this.nCounterTxt.Size = new System.Drawing.Size(100, 23);
-            this.nCounterTxt.TabIndex = 0;
             // 
             // Timer
             // 
@@ -1196,6 +1189,7 @@ namespace HMIAPP
             // 
             // IOControlPanel
             // 
+            this.IOControlPanel.Controls.Add(this.AutoManLabel);
             this.IOControlPanel.Controls.Add(this.S134MetalSensorLabel);
             this.IOControlPanel.Controls.Add(this.S133KnifeHomeSensorLabel);
             this.IOControlPanel.Controls.Add(this.S132HeightExitMaxLabel);
@@ -1439,13 +1433,23 @@ namespace HMIAPP
             // 
             // CloseAppButton
             // 
-            this.CloseAppButton.Location = new System.Drawing.Point(0, 512);
+            this.CloseAppButton.Location = new System.Drawing.Point(0, 682);
             this.CloseAppButton.Name = "CloseAppButton";
             this.CloseAppButton.Size = new System.Drawing.Size(107, 61);
             this.CloseAppButton.TabIndex = 57;
             this.CloseAppButton.Text = "Exit";
             this.CloseAppButton.UseVisualStyleBackColor = true;
             this.CloseAppButton.Click += new System.EventHandler(this.CloseAppButton_Click);
+            // 
+            // AutoManLabel
+            // 
+            this.AutoManLabel.AutoSize = true;
+            this.AutoManLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AutoManLabel.Location = new System.Drawing.Point(709, 27);
+            this.AutoManLabel.Name = "AutoManLabel";
+            this.AutoManLabel.Size = new System.Drawing.Size(97, 25);
+            this.AutoManLabel.TabIndex = 13;
+            this.AutoManLabel.Text = "Auto/Man";
             // 
             // MainPage
             // 
@@ -1472,7 +1476,6 @@ namespace HMIAPP
             this.Controls.Add(this.SettingsBut);
             this.Controls.Add(this.MainBut);
             this.Controls.Add(this.BannerPictureBox);
-            this.Controls.Add(this.nCounterTxt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1501,8 +1504,6 @@ namespace HMIAPP
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox nCounterTxt;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.PictureBox BannerPictureBox;
         private System.Windows.Forms.Button MainBut;
@@ -1629,6 +1630,7 @@ namespace HMIAPP
         private System.Windows.Forms.ToolStripStatusLabel DBConnection;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button CloseAppButton;
+        private System.Windows.Forms.Label AutoManLabel;
     }
 }
 

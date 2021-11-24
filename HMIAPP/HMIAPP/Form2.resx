@@ -260,6 +260,12 @@
         0RRN0RRN0RRN0RRN0RRN0RRN0RSduyST/S/8sFlTS+WtXQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="userNameTxtBoxError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAKiQAAAEAIADoGAAAFgAAACgAAAAqAAAASAAAAAEAIAAAAAAAoBcAAMMOAADDDgAAAAAAAAAA
@@ -371,4 +377,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
+  <metadata name="passTxtBoxError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
 </root>

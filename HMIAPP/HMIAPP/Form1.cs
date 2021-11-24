@@ -55,6 +55,11 @@ namespace HMIAPP
             S134MetalSensor
         }
 
+        enum Buttons
+        {
+            AutoManuButton = 33,
+        }
+
         public MainPage()
         {
             InitializeComponent();
@@ -159,6 +164,8 @@ namespace HMIAPP
             IOControlFunc("SensorsList.S133KnifeHomeSensor");
             SensorIdentifier = ((int)Sensors.S134MetalSensor); ;
             IOControlFunc("SensorsList.S134MetalSensor");
+            SensorIdentifier = (int)Buttons.AutoManuButton ;
+            IOControlFunc("ButtonList.AutoManualButton");
 
 
         }
@@ -238,14 +245,16 @@ namespace HMIAPP
             MainLabel.Text = "MANUAL CONTROL";
             listPanel[4].BringToFront();
             listPanel[4].Show();
-
             listPanel[2].Hide();
             listPanel[3].Hide();
             listPanel[1].Hide();
             listPanel[0].Hide();
             listPanel[5].Hide();
-
-
+            if(AutoManLabel.BackColor == Color.Green)
+            {
+                MessageBox.Show("Machine in Automatic Mode. Switch to Manual Mode");
+                return;
+            }
         }
 
         private void IOControlButton_Click(object sender, EventArgs e)
@@ -258,14 +267,10 @@ namespace HMIAPP
             listPanel[2].Hide();
             listPanel[3].Hide();
             listPanel[4].Hide();
-
-
-
         }
 
         public void InsertAlarm(string AlarmID, string AlarmType, string AlarmDescrip, string AlarmDateTime)
         {
-
             string connectionString;
 
             SqlConnection cnn;
@@ -278,14 +283,11 @@ namespace HMIAPP
             command.Parameters.AddWithValue("@AlarmDescription", Convert.ToString(AlarmDescrip));
             command.Parameters.AddWithValue("@AlarmDateTime", Convert.ToString(AlarmDateTime));
 
-
             cnn.Open();
             DBConnection.Text = "DB Connected";
             DBConnection.BackColor = Color.Green;
 
             command.ExecuteNonQuery();
-
-
             cnn.Close();
             DBConnection.Text = "DB Disconnected";
             DBConnection.BackColor = Color.Red;
@@ -370,6 +372,11 @@ namespace HMIAPP
                     S134MetalSensorLabel.ForeColor = Color.White;
                     S134MetalSensorLabel.BackColor = Color.Green;
                 }
+                else if (SensorIdentifier == ((int)Buttons.AutoManuButton))
+                {
+                    AutoManLabel.ForeColor = Color.White;
+                    AutoManLabel.BackColor = Color.Green;
+                }
                 else
                 { }
             }
@@ -440,13 +447,16 @@ namespace HMIAPP
                     S134MetalSensorLabel.ForeColor = Color.White;
                     S134MetalSensorLabel.BackColor = Color.Red;
                 }
+                else if (SensorIdentifier == ((int)Buttons.AutoManuButton))
+                {
+                    AutoManLabel.ForeColor = Color.White;
+                    AutoManLabel.BackColor = Color.Red;
+                }
                 else
                 {
 
                 }
             }
-
-
             return;
         }
 

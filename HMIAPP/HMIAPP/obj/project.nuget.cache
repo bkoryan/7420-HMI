@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4PQMDbpy7Z5RU4pYAPp3m5PuvoW1tf9PliDt7MBM6PR6PB6GRPgw9bfTDfuqZLe4Z7vs8UM+BRtjGMsRvNCOlA==",
+  "dgSpecHash": "lW8HRQ3cnXrmt/qbuK5JKDu+zm5BJUNuZ156AsS1Q6D4ixIy561D1aQ974u1Npp26ciV7V5BrH5SUjkzFjTmFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\burakfirat.koryan\\Desktop\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
+  "projectFilePath": "C:\\Users\\burakfirat.koryan\\Desktop\\7420-HMI\\HMIAPP\\HMIAPP\\HMIAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burakfirat.koryan\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\burakfirat.koryan\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
