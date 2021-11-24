@@ -18,7 +18,7 @@ namespace HMIAPP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());   
-            Application.Run(new MainPage());
+            //Application.Run(new MainPage());
         }
     }
 }

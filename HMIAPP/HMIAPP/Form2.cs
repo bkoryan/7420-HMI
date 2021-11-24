@@ -81,12 +81,26 @@ namespace HMIAPP
                 this.Hide();
                 MainPage mainPage = new MainPage();
                 mainPage.Show();
+                string taskname = "osk.exe";
+                string processName = taskname.Replace(".exe", "");
+                
+                foreach (Process process in Process.GetProcessesByName(processName))
+                {
+                    process.Kill();
+                }
             }
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            return;            
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contact Support");
         }
     }
 }
